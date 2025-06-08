@@ -1,4 +1,4 @@
-import asyncio
+import 
 import socket
 import sys
 import os
@@ -226,7 +226,7 @@ async def upstream(client: Client, message: Message):
             repo.__del__()
             return
         await status.edit(
-            "`[HEROKU]: RAUSHAN-Userbot Deploy Update is in Progress...`"
+            "`[HEROKU]: FATHER-Userbot Deploy Update is in Progress...`"
         )
         ups_rem.fetch(ac_br)
         repo.git.reset("--hard", "FETCH_HEAD")
@@ -243,7 +243,7 @@ async def upstream(client: Client, message: Message):
         except GitCommandError:
             pass
         await status.edit(
-            "`RAUSHAN-Userbot Successfully Updated! Userbot can be used again.`"
+            "`FATHER-Userbot Successfully Updated! Userbot can be used again.`"
         )
     else:
         try:
@@ -252,9 +252,9 @@ async def upstream(client: Client, message: Message):
             repo.git.reset("--hard", "FETCH_HEAD")
         await updateme_requirements()
         await status.edit(
-            "`RAUSHAN-Userbot Successfully Updated! Userbot can be used again.`",
+            "`FATHER-Userbot Successfully Updated! Userbot can be used again.`",
         )
-        args = [sys.executable, "-m", "RAUSHAN"]
+        args = [sys.executable, "-m", "FATHER"]
         execle(sys.executable, *args, environ)
         return
 
@@ -319,7 +319,7 @@ async def updatees(client: Client, message: Message):
 add_command_help(
     "update",
     [
-        ["update", "To see a list of the latest updates from RAUSHAN-Userbot."],
+        ["update", "To see a list of the latest updates from FATHER-Userbot."],
         ["update deploy", "To update userbot."],
     ],
 )
